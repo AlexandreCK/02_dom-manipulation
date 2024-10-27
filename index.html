@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoteKeeper</title>
+    <link rel="stylesheet" href="./src/css/sanitize.css">
+    <link rel="stylesheet" href="./src/css/globals.css">
+    <link rel="stylesheet" href="./src/css/styles.css">
+    <script src="./src/js/app.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>NoteKeeper</h1>
+    </header>
+
+    <main>
+        <section class="form-container" aria-labelledby="form-title">
+            <h2 class="form-container__title" id="form-title">New Note Form</h2>
+
+            <form action="#" method="post">
+                <label for="title" class="form-container__label">Title:</label>
+                <textarea id="title" name="title" required aria-describedby="title-desc" rows="2"
+                    class="form-container__textarea"></textarea>
+                <p id="title-desc" class="sr-only">Enter the title of your task</p>
+
+                <label for="content" class="form-container__label">Content:</label>
+                <textarea id="content" name="content" required aria-describedby="content-desc" rows="4"
+                    class="form-container__textarea"></textarea>
+                <p id="content-desc" class="sr-only">Enter the main content or description of your task</p>
+
+                <label for="priority" class="form-container__label">Priority:</label>
+                <select id="priority" name="priority" aria-required="true" class="form-container__select">
+                    <option value="select-priority" disabled selected>Select Priority</option>
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+
+                <button type="submit" class="form-container__button" aria-label="Submit the form">Add Note</button>
+            </form>
+        </section>
+
+        <section class="notes-list" aria-labelledby="notes-list-title">
+            <h2 class="notes-list__title" id="notes-list-title">Notes List</h2>
+            <div class="notes-list__content">
+                <article class="notes-list__note">
+                    <h3 class="notes-list__note-title">Note Title</h3>
+                    <p class="notes-list__note-content">This is the note content</p>
+                    <p class="notes-list__note-priority">Priority: Medium</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+</body>
+
+</html>
