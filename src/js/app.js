@@ -21,10 +21,13 @@ form.onsubmit = function (event) {
 
   let priorityElement = document.createElement("p");
   priorityElement.className = "notes-list__note-priority";
-  priorityElement.textContent =
-    priority === "select-priority"
-      ? "No priority"
-      : priority[0].toUpperCase() + priority.substring(1);
+
+  if (priority === "select-priority") {
+    priorityElement.textContent = "No priority";
+  } else {
+    priorityElement.textContent =
+      priority[0].toUpperCase() + priority.substring(1);
+  }
 
   noteArticle.appendChild(titleElement);
   noteArticle.appendChild(contentElement);
