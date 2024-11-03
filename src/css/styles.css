@@ -150,7 +150,7 @@ body {
   }
 
   .form-container__title {
-    color: var(--color-card-text-dark);
+    color: var(--color-text-dark);
   }
 
   .notes-list__title {
