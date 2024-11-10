@@ -4,9 +4,9 @@ let notesListSection = document.querySelector(".notes-list__content");
 form.onsubmit = function (event) {
   event.preventDefault();
 
-  let title = document.getElementById("title").value;
-  let content = document.getElementById("content").value;
-  let priority = document.getElementById("priority").value;
+  let title = event.target.title.value;
+  let content = event.target.content.value;
+  let priority = event.target.priority.value;
 
   let noteArticle = document.createElement("article");
   noteArticle.className = "notes-list__note";
@@ -35,7 +35,5 @@ form.onsubmit = function (event) {
 
   notesListSection.appendChild(noteArticle);
 
-  document.getElementById("title").value = "";
-  document.getElementById("content").value = "";
-  document.getElementById("priority").value = "select-priority";
+  form.reset();
 };
